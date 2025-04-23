@@ -1,9 +1,9 @@
 /**************************************************************
- * Copyright (C) 2025 msa-fw/cms-builder. All Rights Reserved
+ * Copyright (C) 2025 msa-fw. All Rights Reserved
  *
- * @file        web/templates/_BaseTheme_/wysiwygs/wysiwyg/wysiwyg.js
- * @author      msa-fw/cms-builder
- * @site        https://github.com/msa-fw/cms-builder
+ * @file        /msa-fw-wysiwyg/wysiwyg.js
+ * @author      msa-fw
+ * @site        https://github.com/msa-fw/wysiwyg.github.io
  * @date        2025-04-23
  */
 
@@ -259,8 +259,8 @@ window.wysiwyg = {
                     '<thead>' +
                         '<tr>' +
                             '<th class="buttons-add" contenteditable="false">' +
-                                '<div class="button-remove table-button" onclick="wysiwyg.commands.removeTableColumn(this)" contenteditable="false">-</div>' +
-                                '<div class="button-add table-button" onclick="wysiwyg.commands.addTableColumn(this)" contenteditable="false">+</div>' +
+                                '<div class="button-add table-button" onclick="wysiwyg.helper.addTableColumn(this)" contenteditable="false">+</div>' +
+                                '<div class="button-remove table-button" onclick="wysiwyg.helper.removeTableColumn(this)" contenteditable="false">-</div>' +
                             '</th>' +
                             '<th>A</th>' +
                         '</tr>' +
@@ -268,83 +268,14 @@ window.wysiwyg = {
                     '<tbody>' +
                         '<tr>' +
                             '<td class="buttons-add" contenteditable="false">' +
-                                '<div class="button-remove table-button" onclick="wysiwyg.commands.removeTableRow(this)" contenteditable="false">-</div>' +
-                                '<div class="button-add table-button" onclick="wysiwyg.commands.addTableRow(this)" contenteditable="false">+</div>' +
+                                '<div class="button-add table-button" onclick="wysiwyg.helper.addTableRow(this)" contenteditable="false">+</div>' +
+                                '<div class="button-remove table-button" onclick="wysiwyg.helper.removeTableRow(this)" contenteditable="false">-</div>' +
                             '</td>' +
                             '<td>' + content.text + '</td>' +
                         '</tr>' +
                     '</tbody>' +
                 '</table>';
             wysiwyg.insertHtml(button, 'insertHtml', textContent);
-        },
-        addTableColumn: function(self)
-        {
-            let table = self.closest('table');
-            if(wysiwyg.defined(table)){
-                let theadTr = table.querySelector('thead tr');
-                if(wysiwyg.defined(theadTr)){
-                    let theadHead = theadTr.querySelectorAll('th');
-                    let latestHeader = theadHead[theadHead.length-1];
-                    if(wysiwyg.defined(theadHead) && wysiwyg.defined(latestHeader)){
-                        theadTr.innerHTML = theadTr.innerHTML + latestHeader.outerHTML;
-                    }
-                }
-
-                let tbodyTr = table.querySelectorAll('tbody tr');
-                for(let tbodyTrTotal = 0; tbodyTrTotal < tbodyTr.length; tbodyTrTotal++){
-                    let tbodyBody = tbodyTr[tbodyTrTotal].querySelectorAll('td');
-
-                    let latestBody = tbodyBody[tbodyBody.length-1];
-                    if(wysiwyg.defined(tbodyBody) && wysiwyg.defined(latestBody)){
-                        tbodyTr[tbodyTrTotal].innerHTML += latestBody.outerHTML;
-                    }
-                }
-            }
-        },
-        addTableRow: function(self)
-        {
-            let tr = self.closest('tr');
-            if(wysiwyg.defined(tr)){
-                let tbody = self.closest('tbody');
-                if(wysiwyg.defined(tbody)){
-                    tr = tr.cloneNode(tr);
-                    tbody.appendChild(tr);
-                }
-            }
-        },
-        removeTableColumn: function(self)
-        {
-            let table = self.closest('table');
-            if(wysiwyg.defined(table)){
-                let theadTr = table.querySelector('thead tr');
-                if(wysiwyg.defined(theadTr)){
-                    let theadHead = theadTr.querySelectorAll('th');
-                    let latestHeader = theadHead[theadHead.length-1];
-                    if(wysiwyg.defined(theadHead) && wysiwyg.defined(latestHeader)){
-                        theadTr.removeChild(latestHeader);
-                    }
-                }
-
-                let tbodyTr = table.querySelectorAll('tbody tr');
-                for(let tbodyTrTotal = 0; tbodyTrTotal < tbodyTr.length; tbodyTrTotal++){
-                    let tbodyBody = tbodyTr[tbodyTrTotal].querySelectorAll('td');
-
-                    let latestBody = tbodyBody[tbodyBody.length-1];
-                    if(wysiwyg.defined(tbodyBody) && wysiwyg.defined(latestBody)){
-                        tbodyTr[tbodyTrTotal].removeChild(latestBody);
-                    }
-                }
-            }
-        },
-        removeTableRow: function(self)
-        {
-            let tr = self.closest('tr');
-            if(wysiwyg.defined(tr)){
-                let tbody = self.closest('tbody');
-                if(wysiwyg.defined(tbody)){
-                    tbody.removeChild(tr);
-                }
-            }
         },
         header: function(button)
         {
@@ -457,41 +388,7 @@ window.wysiwyg = {
         link: function(button){
             if(button.querySelector('.pop-up')){ return; }
             let content = wysiwyg.focus(button).selected();
-            this.openModal(button, 'wysiwyg.commands.addLink', content.text);
-        },
-        addLink: function(modalId, wysiwygId, linkContent = ''){
-            let wysiwygEditor = document.querySelector('#' + wysiwygId);
-            let editable = wysiwygEditor.querySelector('.container .content');
-            let tmpLink = editable.querySelector('#link-tmp-' + wysiwygId);
-
-            if(wysiwyg.defined(editable)){
-                editable.focus();
-
-                if(!linkContent){
-                    let modalData = document.forms['modalForm'];
-
-                    let linkTitle = '';
-                    let linkHref = '';
-                    if(modalData.url.value){
-                        linkHref = linkTitle = modalData.url.value;
-                        if(modalData.title.value){
-                            linkTitle = modalData.title.value;
-                        }
-                        linkContent = '<a href="' + linkHref + '" target="_blank">' + linkTitle + '</a>';
-                    }
-                }
-
-                if(wysiwyg.defined(tmpLink)){
-                    if(linkContent){
-                        tmpLink.outerHTML = linkContent;
-                        tmpLink.removeAttribute('id');
-                        tmpLink.removeAttribute('class');
-                    }else{
-                        tmpLink.remove();
-                    }
-                }
-            }
-            wysiwyg.commands.closeModal('#' + modalId, '#link-tmp-' + wysiwygId);
+            wysiwyg.helper.openModal(button, 'wysiwyg.helper.addLink', content.text);
         },
         audio: function(button)
         {
@@ -516,60 +413,7 @@ window.wysiwyg = {
         fileRemote: function(button, target)
         {
             let content = wysiwyg.focus(button).selected();
-            this.openModal(button, 'wysiwyg.commands.add' + target, content.text);
-        },
-        addAudio: function(modalId, wysiwygId){
-            let modalData = document.forms['modalForm'];
-
-            if(modalData.url.value){
-                let linkTitle = wysiwyg.translate('wysiwyg.default.value.audio');
-                let linkHref = modalData.url.value;
-
-                if(modalData.title.value){
-                    linkTitle = modalData.title.value;
-                }
-
-                let linkContent = '<br>\n<audio controls class="audio-content-inserted" title="' + linkTitle + '">' +
-                    '<source src="' + linkHref + '">' + linkTitle + '</audio><br>\n';
-
-                this.addLink(modalId, wysiwygId, linkContent);
-            }
-        },
-        addImage: function(modalId, wysiwygId){
-            let modalData = document.forms['modalForm'];
-
-            if(modalData.url.value){
-                let linkTitle = wysiwyg.translate('wysiwyg.default.value.image');
-                let linkHref = modalData.url.value;
-
-                if(modalData.title.value){
-                    linkTitle = modalData.title.value;
-                }
-
-                let linkContent = '<br>\n<img class="image-content-inserted" src="' + linkHref + '" title="' + linkTitle + '"  alt="' + linkTitle + '"/><br>\n';
-
-                this.addLink(modalId, wysiwygId, linkContent);
-            }
-        },
-        addVideo: function(modalId, wysiwygId){
-            let modalData = document.forms['modalForm'];
-
-            if(modalData.url.value){
-                let linkTitle = wysiwyg.translate('wysiwyg.default.value.video');
-                let linkHref = modalData.url.value;
-
-                if(modalData.title.value){
-                    linkTitle = modalData.title.value;
-                }
-
-                let linkContent = '<br>\n<video controls class="video-content-inserted" title="' + linkTitle + '" width="320" height="240">' +
-                    '<source src="' + linkHref + '">' + linkTitle + '</video><br>\n';
-
-                this.addLink(modalId, wysiwygId, linkContent);
-            }
-        },
-        addFile: function(modalId, wysiwygId){
-            this.addLink(modalId, wysiwygId);
+            wysiwyg.helper.openModal(button, 'wysiwyg.helper.add' + target, content.text);
         },
         remove: function(button)
         {
@@ -673,6 +517,164 @@ window.wysiwyg = {
                 }
             }
         },
+    },
+    helper: {
+        addFile: function(modalId, wysiwygId){
+            wysiwyg.helper.addLink(modalId, wysiwygId);
+        },
+        addTableColumn: function(self)
+        {
+            let table = self.closest('table');
+            if(wysiwyg.defined(table)){
+                let theadTr = table.querySelector('thead tr');
+                if(wysiwyg.defined(theadTr)){
+                    let theadHead = theadTr.querySelectorAll('th');
+                    let latestHeader = theadHead[theadHead.length-1];
+                    if(wysiwyg.defined(theadHead) && wysiwyg.defined(latestHeader)){
+                        theadTr.innerHTML = theadTr.innerHTML + latestHeader.outerHTML;
+                    }
+                }
+
+                let tbodyTr = table.querySelectorAll('tbody tr');
+                for(let tbodyTrTotal = 0; tbodyTrTotal < tbodyTr.length; tbodyTrTotal++){
+                    let tbodyBody = tbodyTr[tbodyTrTotal].querySelectorAll('td');
+
+                    let latestBody = tbodyBody[tbodyBody.length-1];
+                    if(wysiwyg.defined(tbodyBody) && wysiwyg.defined(latestBody)){
+                        tbodyTr[tbodyTrTotal].innerHTML += latestBody.outerHTML;
+                    }
+                }
+            }
+        },
+        addTableRow: function(self)
+        {
+            let tr = self.closest('tr');
+            if(wysiwyg.defined(tr)){
+                let tbody = self.closest('tbody');
+                if(wysiwyg.defined(tbody)){
+                    tr = tr.cloneNode(tr);
+                    tbody.appendChild(tr);
+                }
+            }
+        },
+        removeTableColumn: function(self)
+        {
+            let table = self.closest('table');
+            if(wysiwyg.defined(table)){
+                let theadTr = table.querySelector('thead tr');
+                if(wysiwyg.defined(theadTr)){
+                    let theadHead = theadTr.querySelectorAll('th');
+                    let latestHeader = theadHead[theadHead.length-1];
+                    if(wysiwyg.defined(theadHead) && wysiwyg.defined(latestHeader)){
+                        theadTr.removeChild(latestHeader);
+                    }
+                }
+
+                let tbodyTr = table.querySelectorAll('tbody tr');
+                for(let tbodyTrTotal = 0; tbodyTrTotal < tbodyTr.length; tbodyTrTotal++){
+                    let tbodyBody = tbodyTr[tbodyTrTotal].querySelectorAll('td');
+
+                    let latestBody = tbodyBody[tbodyBody.length-1];
+                    if(wysiwyg.defined(tbodyBody) && wysiwyg.defined(latestBody)){
+                        tbodyTr[tbodyTrTotal].removeChild(latestBody);
+                    }
+                }
+            }
+        },
+        removeTableRow: function(self)
+        {
+            let tr = self.closest('tr');
+            if(wysiwyg.defined(tr)){
+                let tbody = self.closest('tbody');
+                if(wysiwyg.defined(tbody)){
+                    tbody.removeChild(tr);
+                }
+            }
+        },
+        addLink: function(modalId, wysiwygId, linkContent = ''){
+            let wysiwygEditor = document.querySelector('#' + wysiwygId);
+            let editable = wysiwygEditor.querySelector('.container .content');
+            let tmpLink = editable.querySelector('#link-tmp-' + wysiwygId);
+
+            if(wysiwyg.defined(editable)){
+                editable.focus();
+
+                if(!linkContent){
+                    let modalData = document.forms['modalForm'];
+
+                    let linkTitle = '';
+                    let linkHref = '';
+                    if(modalData.url.value){
+                        linkHref = linkTitle = modalData.url.value;
+                        if(modalData.title.value){
+                            linkTitle = modalData.title.value;
+                        }
+                        linkContent = '<a href="' + linkHref + '" target="_blank">' + linkTitle + '</a>';
+                    }
+                }
+
+                if(wysiwyg.defined(tmpLink)){
+                    if(linkContent){
+                        tmpLink.outerHTML = linkContent;
+                        tmpLink.removeAttribute('id');
+                        tmpLink.removeAttribute('class');
+                    }else{
+                        tmpLink.remove();
+                    }
+                }
+            }
+            wysiwyg.helper.closeModal('#' + modalId, '#link-tmp-' + wysiwygId);
+        },
+        addAudio: function(modalId, wysiwygId){
+            let modalData = document.forms['modalForm'];
+
+            if(modalData.url.value){
+                let linkTitle = wysiwyg.translate('wysiwyg.default.value.audio');
+                let linkHref = modalData.url.value;
+
+                if(modalData.title.value){
+                    linkTitle = modalData.title.value;
+                }
+
+                let linkContent = '<br>\n<audio controls class="audio-content-inserted" title="' + linkTitle + '">' +
+                    '<source src="' + linkHref + '">' + linkTitle + '</audio><br>\n';
+
+                this.addLink(modalId, wysiwygId, linkContent);
+            }
+        },
+        addImage: function(modalId, wysiwygId){
+            let modalData = document.forms['modalForm'];
+
+            if(modalData.url.value){
+                let linkTitle = wysiwyg.translate('wysiwyg.default.value.image');
+                let linkHref = modalData.url.value;
+
+                if(modalData.title.value){
+                    linkTitle = modalData.title.value;
+                }
+
+                let linkContent = '<br>\n<img class="image-content-inserted" src="' + linkHref + '" title="' + linkTitle + '"  alt="' + linkTitle + '"/><br>\n';
+
+                this.addLink(modalId, wysiwygId, linkContent);
+            }
+        },
+        addVideo: function(modalId, wysiwygId){
+            let modalData = document.forms['modalForm'];
+
+            if(modalData.url.value){
+                let linkTitle = wysiwyg.translate('wysiwyg.default.value.video');
+                let linkHref = modalData.url.value;
+
+                if(modalData.title.value){
+                    linkTitle = modalData.title.value;
+                }
+
+                let linkContent = '<br>\n<video controls class="video-content-inserted" title="' + linkTitle + '" width="320" height="240">' +
+                    '<source src="' + linkHref + '">' + linkTitle + '</video><br>\n';
+
+                this.addLink(modalId, wysiwygId, linkContent);
+            }
+        },
         openModal: function(button, success, textContent)
         {
             let wysiwygEditor = wysiwyg.getEditor(button);
@@ -687,25 +689,25 @@ window.wysiwyg = {
 
             let modalPopUp =
                 '<div class="pop-up modal-pop-up">' +
-                    '<div class="modal-header">' +
-                        '<h2 class="header-value">' + button.title + '</h2>' +
-                    '</div>' +
-                    '<div class="modal-body">' +
-                        '<form name="modalForm">' +
-                            '<div class="input">' +
-                                '<input name="title" type="text" value="' + textContent + '" placeholder="' + wysiwyg.translate('input.title.placeholder') + '">' +
-                            '</div>' +
-                            '<div class="input">' +
-                                '<input name="url" type="url" placeholder="' + wysiwyg.translate('input.href.placeholder') + '">' +
-                            '</div>' +
-                        '</form>' +
-                    '</div>' +
-                    '<div class="modal-footer">' +
-                        '<div class="buttons">' +
-                            '<button class="button success" onclick="(' + success + ')(\'' + modalId + '\', \'' + wysiwygId + '\')">✔</button>' +
-                            '<button class="button danger" onclick="wysiwyg.commands.closeModal(\'#' + modalId + '\', \'#link-tmp-' + wysiwygId + '\')">✖</button>' +
-                        '</div>\n' +
-                    '</div>' +
+                '<div class="modal-header">' +
+                '<h2 class="header-value">' + button.title + '</h2>' +
+                '</div>' +
+                '<div class="modal-body">' +
+                '<form name="modalForm">' +
+                '<div class="input">' +
+                '<input name="title" type="text" value="' + textContent + '" placeholder="' + wysiwyg.translate('input.title.placeholder') + '">' +
+                '</div>' +
+                '<div class="input">' +
+                '<input name="url" type="url" placeholder="' + wysiwyg.translate('input.href.placeholder') + '">' +
+                '</div>' +
+                '</form>' +
+                '</div>' +
+                '<div class="modal-footer">' +
+                '<div class="buttons">' +
+                '<button class="button success" onclick="(' + success + ')(\'' + modalId + '\', \'' + wysiwygId + '\')">✔</button>' +
+                '<button class="button danger" onclick="wysiwyg.helper.closeModal(\'#' + modalId + '\', \'#link-tmp-' + wysiwygId + '\')">✖</button>' +
+                '</div>\n' +
+                '</div>' +
                 '</div>';
 
             let modalPopUpInput = document.createElement('div');
@@ -761,9 +763,10 @@ document.addEventListener('click', function(event){
 
 document.addEventListener('keydown', function(event){
     if(event.key === 'Escape'){
-        wysiwyg.commands.closeModal('.modal-pop-up-window', '.tmp-lik-for-wysiwyg-editor');
+        wysiwyg.helper.closeModal('.modal-pop-up-window', '.tmp-lik-for-wysiwyg-editor');
     }
 });
+
 
 
 
