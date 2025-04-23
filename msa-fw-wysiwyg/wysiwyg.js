@@ -23,6 +23,7 @@ window.wysiwyg = {
     init: function(textAreaFieldSelector, packageKit)
     {
         let selectorObject = document.querySelector(textAreaFieldSelector);
+        wysiwyg.makeEvent(selectorObject, 'beforeWysiwygInitialized');
 
         if(wysiwyg.defined(selectorObject)){
             wysiwyg.addRemoveClass('hidden', selectorObject);
@@ -30,6 +31,7 @@ window.wysiwyg = {
             let parent = selectorObject.parentNode;
             parent.innerHTML = parent.innerHTML + this.createField(textAreaFieldSelector, packageKit);
         }
+        wysiwyg.makeEvent(selectorObject, 'afterWysiwygInitialized');
     },
     createField: function(textAreaFieldSelector, packageKit, append)
     {
@@ -83,9 +85,9 @@ window.wysiwyg = {
             if(childrenButtons){
                 result = result +
                     '<span class="wysiwyg-button clickable with-pop-up ' + parent[p].key + '" onclick="wysiwyg.commands.' + parent[p].key + '(this)">' +
-                        '<img class="pop-up-image" src="' + parent[p].icon + '" title="' + parent[p].title + '"/>' +
+                        '<img class="pop-up-image" src="' + parent[p].icon + '" title="' + wysiwyg.translate(parent[p].title) + '"/>' +
                         '<span class="pop-up closeable hidden">' +
-                            '<span class="header">' + parent[p].title + '</span>' +
+                            '<span class="header">' + wysiwyg.translate(parent[p].title) + '</span>' +
                             '<span class="children-buttons">' + childrenButtons + '</span>' +
                         '</span>' +
                     '</span>';
@@ -109,18 +111,22 @@ window.wysiwyg = {
         }
 
         if(!titleAsText){
-            return '<span class="' +  buttonClass + '"' + buttonParams + ' data-title="' + button.title + '">' +
-                        '<img src="' + button.icon + '" title="' + button.title + '"/>' +
+            return '<span class="' +  buttonClass + '"' + buttonParams + ' data-title="' + wysiwyg.translate(button.title) + '">' +
+                        '<img src="' + button.icon + '" title="' + wysiwyg.translate(button.title) + '"/>' +
                     '</span>';
         }
-        return '<span class="' +  buttonClass + '"' + buttonParams + ' data-title="' + button.title + '">' +
+        return '<span class="' +  buttonClass + '"' + buttonParams + ' data-title="' + wysiwyg.translate(button.title) + '">' +
                     '<img src="' + button.icon + '"/>' +
-                    '<span class="title">' + button.title + '</span>' +
+                    '<span class="title">' + wysiwyg.translate(button.title) + '</span>' +
                 '</span>';
     },
     run: function(selector)
     {
         let wysiwygObject = document.querySelector(selector);
+
+        wysiwyg.makeEvent(wysiwygObject, 'onWysiwygInitialized');
+        wysiwyg.makeEvent(wysiwygObject, 'beforeWysiwygStart');
+
         document.addEventListener('input', function(event){
             if(wysiwyg.defined(wysiwygObject.dataset) && wysiwyg.defined(wysiwygObject.dataset.selector)){
                 let selector = document.querySelector(wysiwygObject.dataset.selector);
@@ -129,6 +135,7 @@ window.wysiwyg = {
                 }
             }
         });
+        wysiwyg.makeEvent(wysiwygObject, 'afterWysiwygStart');
     },
     showPopUp: function(button)
     {
@@ -689,25 +696,25 @@ window.wysiwyg = {
 
             let modalPopUp =
                 '<div class="pop-up modal-pop-up">' +
-                '<div class="modal-header">' +
-                '<h2 class="header-value">' + button.title + '</h2>' +
-                '</div>' +
-                '<div class="modal-body">' +
-                '<form name="modalForm">' +
-                '<div class="input">' +
-                '<input name="title" type="text" value="' + textContent + '" placeholder="' + wysiwyg.translate('input.title.placeholder') + '">' +
-                '</div>' +
-                '<div class="input">' +
-                '<input name="url" type="url" placeholder="' + wysiwyg.translate('input.href.placeholder') + '">' +
-                '</div>' +
-                '</form>' +
-                '</div>' +
-                '<div class="modal-footer">' +
-                '<div class="buttons">' +
-                '<button class="button success" onclick="(' + success + ')(\'' + modalId + '\', \'' + wysiwygId + '\')">✔</button>' +
-                '<button class="button danger" onclick="wysiwyg.helper.closeModal(\'#' + modalId + '\', \'#link-tmp-' + wysiwygId + '\')">✖</button>' +
-                '</div>\n' +
-                '</div>' +
+                    '<div class="modal-header">' +
+                        '<h2 class="header-value">' + button.title + '</h2>' +
+                    '</div>' +
+                    '<div class="modal-body">' +
+                        '<form name="modalForm">' +
+                            '<div class="input">' +
+                                '<input name="title" type="text" value="' + textContent + '" placeholder="' + wysiwyg.translate('input.title.placeholder') + '">' +
+                            '</div>' +
+                            '<div class="input">' +
+                                '<input name="url" type="url" placeholder="' + wysiwyg.translate('input.href.placeholder') + '">' +
+                            '</div>' +
+                        '</form>' +
+                    '</div>' +
+                    '<div class="modal-footer">' +
+                        '<div class="buttons">' +
+                            '<button class="button success" onclick="(' + success + ')(\'' + modalId + '\', \'' + wysiwygId + '\')">✔</button>' +
+                            '<button class="button danger" onclick="wysiwyg.helper.closeModal(\'#' + modalId + '\', \'#link-tmp-' + wysiwygId + '\')">✖</button>' +
+                        '</div>\n' +
+                    '</div>' +
                 '</div>';
 
             let modalPopUpInput = document.createElement('div');
@@ -739,13 +746,31 @@ window.wysiwyg = {
             return false;
         }
     },
-    translate: function(key){
+    translate: function(key)
+    {
         return wysiwyg.defined(this.langs[key]) ? this.langs[key]: key;
     },
     defined: function(val)
     {
         return val !== null && val !== undefined && val !== '';
     },
+    makeEvent: function(element, eventName, eventType = null)
+    {
+        eventType = eventType ? eventType : eventName;
+
+        let event;
+        if(document.createEvent){
+            event = document.createEvent("HTMLEvents");
+            event.initEvent(eventName, true, true);
+            event.eventName = eventName;
+            element.dispatchEvent(event);
+        } else {
+            event = document.createEventObject();
+            event.eventName = eventName;
+            event.eventType = eventType;
+            element.fireEvent(event.eventType, event);
+        }
+    }
 };
 
 document.addEventListener('click', function(event){
