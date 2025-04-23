@@ -3,7 +3,7 @@
  *
  * @file        /msa-fw-wysiwyg/wysiwyg.js
  * @author      msa-fw
- * @site        https://github.com/msa-fw/wysiwyg.github.io
+ * @site        https://github.com/msa-fw/wysiwyg
  * @date        2025-04-23
  */
 
