@@ -1,0 +1,7 @@
+{
+    "wysiwyg.default.value.audio": "песня",
+    "wysiwyg.default.value.image": "картинка",
+    "wysiwyg.default.value.video": "видео",
+    "input.title.placeholder": "текст ссылки (не обязательно)...",
+    "input.href.placeholder": "URL ссылки"
+}

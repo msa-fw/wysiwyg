@@ -1,0 +1,266 @@
+[
+    {
+        "key": "fullScreen",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA00lEQVR4nO3ZzwrCMAwG8A\/04ZzI3E2ffjt09d\/RF4gIOchOpg1rGN8Pek0TFmi6AkREWyHGNQHoDPGvAB4F+5hJwUp\/xt4DeBfuEaqQXeRCRgAHQ\/xLq9ZqRViI4hdxJmwtxdZyJmwtNS0Ou1byTx5zSYBOR45kPLG9nQG8dAroG+ZBRERE5GnQGefZeMYZavOonjqd5No8eEN0JrwhKraWM2FrKbaWM1n7fSQbT97j4pdTmIee77ob4s9RX6wEwM0QP0UtJAM4GX8AjmsUQkTYjg+\/4XBGJz6ZQQAAAABJRU5ErkJggg==",
+        "title": "развернуть на весь экран",
+        "parentKey": ""
+    },
+    {
+        "key": "remove",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJ0lEQVR4nO2aTWrDQAxG3ypn6SJdpasmvZ7TXiu5Sp3gXEIloEUZWnvskT2KowcCLzQwD83nHzAE62UDfAEXQAaqBY66xh2fGQJpNTik1c29Z\/Tuf03GHaI1V\/9iuBY5Tzj3c9V5LSIni8nUljAjRIiJEEerj8gIkREiI31ERniwjOyBHdCN2Fynaw6eRHbat82U6bT3zpsnkRvwqr0vA9\/tae\/Vk4hkykyRkKVFhmSmSkgNkf9kSiSklkga5m1yPebOJrVF0slMnYR4Fbk8mki3hqN1+yPYY54z4kGk7+5UImNGqUSpjBkWEiUyZjzNS+NBNzT2Nf6+5sOTiMxcZoQIMRHiaPURGSEyQmQk52eAGvWNIceKIo2lyEZl2oUn0Xj98SZggB9RU\/CvZnGknAAAAABJRU5ErkJggg==",
+        "title": "очистить",
+        "parentKey": ""
+    },
+    {
+        "key": "editSource",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB\/ElEQVR4nO3Zu0vEMBzA8a+DDg5uCm5OgoI4uqugIL4L4iKIu\/\/E6YEu6vmY\/BdEJ1dRdxEVXAT\/BhXfj0gghVD7Oi5JW+kPwpUm90s\/lzaX3MHfEBbKLdCJ4xD\/BSNUMZ3POUZYglxrrx0G8zuHtANXLkdGWILgGiMsQpxihGWIM4xwAHGCEY4g1jHCIcQqRjiGWMOIDCBWMCIjiAyjGJtrrXrLtYmOTUWjq+bcQDK7DlFCCjQiwlIpIXFRPiOGQ5SzVoFurTagtciz1jhwo85\/AydAf9EgS8BPyHsfgd56IS7jHDhTxx7wGfNBHOUZQgiiBtyHQB7IOcTTEBV1risEk2uIF4IgAnOY14fdi0H4sa3qn4CePEK8FIiqqpftJiLaZHprzQIfqv+1iDYVVf8FzMclywoiRyIJsaLqZbuZpIRZQNIgVjXEdJqkriFpEFVV\/w5MpU1s+mHPBOESkoRoAjY0xGRMrtiLtRlpEJsaInKKzRKSBrHVKMI2JA2ipiHk\/oO8QQYSvrElYlfVvwKjjXZoC7Kj8h5EIPY0xIiJDm1B7rSlxUIA4SPfgDFTHdqAdAemZIlZDNxOL8CwyU5NrGblNlWP5ZA28seDU3X8DAyZRJiC+HttP45j2krEIAWIFnXbBEfjAlgH+ihINAOXamu6D8yp\/wqNxi8s9E5U65tPCgAAAABJRU5ErkJggg==",
+        "title": "редактировать исходный код",
+        "parentKey": ""
+    },
+    {
+        "key": "showBlocks",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB2ElEQVR4nO3ZT6hNURTH8Y\/8GTAw4SXpJfkzMVJEhuTFXJSY+VfmPANKKX8GJmbUiwElEhMMhN6EngiZKJlgorzMJLejW3vw7unk3XPufu59Wd9aw7P2+u19fru1ziEIgv+eeTiA9yh6iHEswyg+9pinFnOTgA89CpgavzLlqcV4jiSJLAVp+FyuxXPmKkKIOJEO4tUqER4pwiOdhEdKhEeK8MgAeeT5P+i11mETtmM3DuIELuAq7uIZ3uFL0xoWYaxi8cUYxnpsxU7sxSEcx1lcxnXcw5OMY0CBB3WFnE6t\/M\/MhdSJFp5iD1ZgoQb87qOAoiLe4CSW1xVSDGh8nq1CWvhWGrkHTsgVnE831eF0c23DBqxMF0tVTVmEfE1fVNoXwX1cwyWcwjHsSzfZZqzF0r\/kalpTLXItnjNXEULEiXQQr1aJ8EgRHukkPDLbPbIEW9JvjTO4iYmmNUzMgJBWKVdVsZPT9GeP6i4+lEbMboXMx2rswJE0rt7GqynP7uqi0HZMJlE3ksj9qXdrn1QjqsRsTBPbaOpeH+NTF4PYw5RzDV7PRLHT0e5e33bZln\/HS9zCuTTHtz8srMIcA8AQXuBH2s07uIijGEm7vKDfRQZBEAT6xR9SiNXi13JlWAAAAABJRU5ErkJggg==",
+        "title": "показать блоки",
+        "parentKey": ""
+    },
+    {
+        "key": "limiter",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWUlEQVR4nO3RsQ3AQAwDMe+\/tNOnS3f5JwENINwMd9nXfmsdiVGkRpEaRWoUqVGkRpEaRWoUqVGkRpEaRWoUqVGkRpEaRWoUqVGkRpEaRWoUqVGk5pgizEcPg2G3STOUdwYAAAAASUVORK5CYII=",
+        "title": "",
+        "parentKey": ""
+    },
+    {
+        "key": "bold",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB2klEQVR4nO3ZO2tUQRgG4Aejxi7YKIgi2HhpRKxsrBQLESstBLHUkMbaG\/4FxVKMjY0gRiXgBTSFiuANvHWLlhJBFEG8kZEDR0iVnTVzzpk9nBe+9oUHdne+naFLly6LzTpcw70EcwdXMYnzmMBujKkhRxEqnl8l9DCWVAUZrwEyf15jRxsgAT9woA2QgN\/Y1gZIwFOMtAESsK9uyHv0FphZzP0HZLJuyMqIruJjshGn8CWy91WOkPnZgq8RvZ9yhxQ5G9E7h2W5Q3ZGQkZyh2yN6J1Ngagasjei9+4wQC5G9E7kDil2qT8Rv1hjdUOKvWhDn9mEg7gR2XkoFWIQSOo5kxLRFOR0akRTkO84mXLzbQoSypnCaBsgAZfqhkyVNyQLzXXM4POAmD25niPFTcmu8h9gTPeLXCH\/shy3I\/u35wwpsj7ihA8pzpWqIUWeRPTfHAbIlTq+J+M1QC5H9PeGAXI\/ov9d7pDV5SV2v\/4HOUOK9WM6sv9CjpDR8gbxWWR3wP66IDMRDz2P8AE\/BwAEfEyxPDa9NAYcXywiB8hjLB12SA9rUiCahDzH2lSIJiDfyjvhFRLnWE2AtziBVSrKZrzs84gzyLzBQ9zCORwpnxi6dOnSRd\/8BU217GgCnXt6AAAAAElFTkSuQmCC",
+        "title": "жирный",
+        "parentKey": ""
+    },
+    {
+        "key": "italic",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1ElEQVR4nOXVvwqBYRTH8a9YjIoMFpOSMrC4D2VgwuRdLK7AYrJYLEpZLVIuwOQCLCYmSqEMbP7s+qVezjPIt876fDrLeeBfKwIPH7P5FOr5hIafQmEgB7SBm3j4ANSBDBDBqIWAPBy0E1DKGkkLZIuDPAGNXEBjAVWtkQCwF1DSGsoKZI2DmgIauIAmAqpYI0HgJKCENZQXyAoHtQTUdwHNBFSyRkLA+QW5A3FrqCC2WeKgroCmlkAUaABXAR2BMhD7BqgBFx\/f9tzyQr+bzjdb\/W5PpnqPYCCE2FEAAAAASUVORK5CYII=",
+        "title": "курсив",
+        "parentKey": ""
+    },
+    {
+        "key": "strike",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEbElEQVR4nO2cW4hWVRTHf5PaeJkKNSi1gmocCMQHpQtmFqQPNZlglwm8vpiiEoYv9iLaWIQPdhWK7je6SQ9G2EMTaRBEouYFbYx8UBRLx0Btchz9YtUSho+9z3e+z3POPvuc\/YOFzJkze\/33wnP2ba0DgUAgEAgEAoFAwFtGAA8CncBmYB\/QA\/yt1qPXNus9cu9wSk4TMAP4AjgLVOo0+ZvPgenaVql4CNjTQNBsthtopwSMA75OMHDV9hUwloIyHTiZYvAu2QngfgrGQuB8jY5LcDcBi4G7gTbgarU2vbZE7+mp0Zb4WkCBgnchorM7gA5gUB1tyr1PADsj2hWf8\/Gc+4A+Swf\/AGZfZvsy+j6qj63JxzlgGp4yGjhq6di3wJgEfcnA0WXxdQQYiYe8Z+mQjMJXpuBP2txi8fkWnjHR8t77Hhiaot9hwDaD335gAh7xsWXlcHMGvm8CThv8v49H775\/DB14OkMNKw3+e315F84xiP9LH6+skNfEKYMOmfrknrcNwt8ssY66+dkg\/AEHOtoNOn7CA\/40CJdNhKy50aDjOB5wziC82YGOZoMOGdxyT69BeJpzvyiOVOk4jAccNwRQ5mYueBK4qBrk30V4wI+GAD7sUM9kYBkwCU943RDAD1yL8olHDAE8A7S4FuYLV2nAqoO42rUwn3jDMoW4zbUwX2iz7ERv1zOOQAxetmxuyn5d6bMK4tACdFuCKGvS1vDfsDaTLJubFb0uE93BMdopNe2W9fEl+x1YWtbHull3eWvZnIjjzYGj9HfAM8BM4E5dAo5M2VxsdPx3AvZhjGwDH6xPV0pDsgzgihx0vJKwPZVlAN\/JQYcrCZscAWTGvBx0uJKwzc0ygE36su\/WTKk0rZHs1Qt1tP8rsKroWa4twHhgFvBaxAS9MmDzNNN3mo\/cC3xTI5DLXYv0ganAIUsA+zWjP1CDa4DPIvIQr6\/VQACu0Mm9KYifhADFY7Bm6psGlTtitlF6rrMkocsjHojJIsua99q4DZSdIZYcHe+z9rNkoyGA7+IBTVobslGLXVwtkWZYDrVyz\/oq0S840jHWMifMPSeqRMvPrjZ9qwMoRwu5pzcn6W0jDDqkeDv3HDMIv8WBjlaDDqmcyj0\/GIQ\/5kBHh0HHVjzgVYNwKVHNmi8NOl7BA2bmoMhllKXYx4vPAgy3FLlsyFDDSwb\/PRkX+ySeWNSv6bZpc7v6qvb\/Ih5xg04ZqjvRnfLmptQgHzT4PeuoVuWy6Iz4RIkUJCaN7LTstfhci4c0a7BMHTqY8AbnXcBvFl+7UirwzoTxEZ86kf25NZpT3SiS7fpsRI7OySLkIU6zJJ0PHB076yzGkXvXWUb7gfmHcmJXCKbG\/OjOfp2IL9ZD9Clqs\/SaHKofiNGO+LqHgtEa8U5M0n4pwmMbNbA8XyNjtVGTNp9zlTCZNbcCH8XIWo1jfdqWtFk6xmkF0+4GH9XVOmkP8H8wO\/Qx\/FS\/RLRdrUuvye8e93FVEQgEAhSQfwFrocB5G4xR1gAAAABJRU5ErkJggg==",
+        "title": "зачеркнутый",
+        "parentKey": ""
+    },
+    {
+        "key": "underline",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABhklEQVR4nO2ZS0oDQRCGfze68LESXPtW9DqK+LiGegHFG\/g6gQg+biBkguItZhlcRsEJSElDLYJYnW6nahKkPqhNwtSXmq6uaSaA4zjOf6QNgH5EqyFPoSkgIbQha48Xkgn5iiTirZUJeWsl4q2VCXlrJeKtlQl5ayXirZUJeWsl4q2VCXlrJeKtNWo3rBIEU4qOGcHxqejAmyBZUXSsCo6OogOvgmRX0XEgOJ4VHbgSJDeKjlvBcaHowI4gCXtnUSH\/MoCe4NiCItMAPgTRXc3cYwAehdxdAJNQ5joyHg9r5D2O5L2EAUuR5f\/6QzFhJY74WmnszsOIs8jdC3HPBafsiYcBuU5gyITw6r8\/ejyB9gCs8UMzxDqAff5OWlnq+8tiHMbMASgH\/JA6UbKjETaNiikBbKBhZgE8KRYRWraxlfhtz5xGDpUpUfHGNt8TKSzwzH\/PKKDL15iN2DqE6bTN56MXPrlWHB3+7JyPHepPbMcZMm3Dh6AUhUUhxRAKaVkUMtJ8A60WNN38tlmxAAAAAElFTkSuQmCC",
+        "title": "подчеркнутый",
+        "parentKey": ""
+    },
+    {
+        "key": "limiter",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWUlEQVR4nO3RsQ3AQAwDMe+\/tNOnS3f5JwENINwMd9nXfmsdiVGkRpEaRWoUqVGkRpEaRWoUqVGkRpEaRWoUqVGkRpEaRWoUqVGkRpEaRWoUqVGk5pgizEcPg2G3STOUdwYAAAAASUVORK5CYII=",
+        "title": "",
+        "parentKey": ""
+    },
+    {
+        "key": "quote",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACgklEQVR4nO2ZTYtOYRjHfwwhysIYSsPGgoWRNDYWIhuKwjfAML7DlJ3IgqJIIj6AbCRjMgwL43WHKZlRo0RmY2K8zFy665p6etz3nPuc+7zcp55f\/TfTNf9z\/Z9zzv12oEWLFmUwD9gMnACuAoPAR2AC+Kua0L8Nak0v0KX\/WznbgIvAOCAZNa4e3WU3b37Bg8DzgOZdegYcKOMudevFpGANA1uLCLAAOKPPupSkP8ApvXYudACPSgwgTTKDw8rQEGuBkQpDiOod0Jk1xCrgQwQhRPVen45ULNEXTiLTU2BxmiAXImhaHDrvG2InMBNBw+KQ6W1HUoj5wMsImpUEvdZenRyKoEnxlFkBOMk6X7jIWiceGnCZdQa8G1UEmQHW2Mx6A25zFUEE6LGZ3axhkOs2s1c1DPLCZvalhkE+28ymahhkymb2I8BwVt+b1muhdZKgn7Ygn3II8qDBb0MOdZLl0cpjaXK8we9oDnWSIHNu8B9XAkOYZf\/CBr+HgXXioWu2ICG\/zBOgvcFrV2CdeOqILUiHbvizGDYeEKwAxgLrxEPTwGoc3M1oOkt7wsTqWyceuscc7A4Iss9j5POtEw\/tJ4GhDKa+h3Z5He4N+5xGmoPlXzldsAhNA9vxpC+ChsWhs6TA7IdvR9C0WIbvRaRkaWRnWyNNc1AqlgH3Iwjx1rWtTYNZnd6oMES\/Tp650VNygN\/ASaCNnFlfYoghnQYK4XAJAR4DeyiYgYKaHwXO6VfhwlmnM+pcDX0FjgGngTvAG11TTeo2+pt+sDEv7yW9wxspmcseH2E2ETldOoK4QtwClhM5bfqVyBbAzPp7qQl92vSk7ub6dWzfUnVjLYicfweLRaFu14IaAAAAAElFTkSuQmCC",
+        "title": "цитата",
+        "parentKey": ""
+    },
+    {
+        "key": "code",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACfUlEQVR4nO2YO2uUQRSGHzWFtyhqF9CInZFYZAvjBWzV1oAiogii5AdEMNWiYhQb0X9gFQvFC6bWShBDjJdSEBSNWimRREEjI7OyHM63O7cv64fzwFQ7886c+WbOnHchk8lkMv8JXUAd6Kfi7AMWbHsODFNRbjQFYto1KshK4KsIZCcV5LAI4g2whApyTwRyfrEXUAMGIjXWA99FIH1txgzYuZPQA7wF5oAjETqnRRBTbfofBGaB98BGIlkFTDZN\/gsYDdR6KAIZadF31M7V6PvUJoogzCUcF5ObdjFAy+zoT7EhvS36jynz3gKWhgSiid0OFDsjdMzXabeJN5X5z\/lOfEwRmbJHLYRnQuuUw5gVwBMxznzJo66T7gbmhcCHiAu3VWj9ADZ4JJp3YvycyyO6GfioDBwknAtC767n+BrwTWjMAJuKBnTbIk5+ypiUa876a6F5KEBnSGQx014Ca2THZcB95V6YcjuGXUJvNuKe1ZX1PbBr\/8tVpdN4gjroutA0lW\/q5+BSo8MJ5cfJmAeoyUDNCF3jRWJYDjxW1nuyzED2C81PNrjSAinraEkDZY4ZJRyty2Ve9jIMVF1Z34S87I30+yJR+k1toIaU9PsKWFv2g5jSQNWUB\/EzsKXdwD2RJco6xUBtCwyiRylRjPZeV4HjBUXj6hIMlE\/RuNCcoVy54vKSKjzyMFC+ZfxYgNYf33HHU8zXQPl4oQmHTSzEHKXpopJAYcTTQBVxVmzItOOxbkmvLTXm7d1JbaCKOAB8cc1Qrgw6pOA+JbuYv4Bi2A7sYJGJNVD\/BKkMVMdJaaA6SkoD1VGGhd+PNVAdp9+W27EGKpPJZDJUgt9qe2YKMc1BIgAAAABJRU5ErkJggg==",
+        "title": "блок кода",
+        "parentKey": ""
+    },
+    {
+        "key": "hr",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nO3PAQ0AAAjDsPs3DQJQcNImE7AEAAAAALpNacebEQAAAABIiQXVSlulThnHbAAAAABJRU5ErkJggg==",
+        "title": "линия",
+        "parentKey": ""
+    },
+    {
+        "key": "header",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjklEQVR4nO3Vuw2AMBAE0e2\/LD7tENCASUnMwgqELc+TLjWyPCck9GeVVMwsDZ1bVW5OK+dWcRGDF0mRlkFaKdIySCtFWgZppUjLIK3UcGmVj+Y1XES8iEjrCjsidkS\/7sh2mr3n\/8hTXCTFixiklSItg7RSpGWQVoq0DNJKkZZBWho9rfnGx6aGzoVacAB7fP4OHiH6hQAAAABJRU5ErkJggg==",
+        "title": "заголовок",
+        "parentKey": ""
+    },
+    {
+        "key": "h1",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjklEQVR4nO3Vuw2AMBAE0e2\/LD7tENCASUnMwgqELc+TLjWyPCck9GeVVMwsDZ1bVW5OK+dWcRGDF0mRlkFaKdIySCtFWgZppUjLIK3UcGmVj+Y1XES8iEjrCjsidkS\/7sh2mr3n\/8hTXCTFixiklSItg7RSpGWQVoq0DNJKkZZBWho9rfnGx6aGzoVacAB7fP4OHiH6hQAAAABJRU5ErkJggg==",
+        "title": "
+заголовок<\/h1>",
+        "parentKey": "header"
+    },
+    {
+        "key": "h2",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjklEQVR4nO3Vuw2AMBAE0e2\/LD7tENCASUnMwgqELc+TLjWyPCck9GeVVMwsDZ1bVW5OK+dWcRGDF0mRlkFaKdIySCtFWgZppUjLIK3UcGmVj+Y1XES8iEjrCjsidkS\/7sh2mr3n\/8hTXCTFixiklSItg7RSpGWQVoq0DNJKkZZBWho9rfnGx6aGzoVacAB7fP4OHiH6hQAAAABJRU5ErkJggg==",
+        "title": "
+заголовок<\/h2>",
+        "parentKey": "header"
+    },
+    {
+        "key": "h3",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjklEQVR4nO3Vuw2AMBAE0e2\/LD7tENCASUnMwgqELc+TLjWyPCck9GeVVMwsDZ1bVW5OK+dWcRGDF0mRlkFaKdIySCtFWgZppUjLIK3UcGmVj+Y1XES8iEjrCjsidkS\/7sh2mr3n\/8hTXCTFixiklSItg7RSpGWQVoq0DNJKkZZBWho9rfnGx6aGzoVacAB7fP4OHiH6hQAAAABJRU5ErkJggg==",
+        "title": "
+заголовок<\/h3>",
+        "parentKey": "header"
+    },
+    {
+        "key": "h4",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjklEQVR4nO3Vuw2AMBAE0e2\/LD7tENCASUnMwgqELc+TLjWyPCck9GeVVMwsDZ1bVW5OK+dWcRGDF0mRlkFaKdIySCtFWgZppUjLIK3UcGmVj+Y1XES8iEjrCjsidkS\/7sh2mr3n\/8hTXCTFixiklSItg7RSpGWQVoq0DNJKkZZBWho9rfnGx6aGzoVacAB7fP4OHiH6hQAAAABJRU5ErkJggg==",
+        "title": "
+заголовок<\/h4>",
+        "parentKey": "header"
+    },
+    {
+        "key": "h5",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjklEQVR4nO3Vuw2AMBAE0e2\/LD7tENCASUnMwgqELc+TLjWyPCck9GeVVMwsDZ1bVW5OK+dWcRGDF0mRlkFaKdIySCtFWgZppUjLIK3UcGmVj+Y1XES8iEjrCjsidkS\/7sh2mr3n\/8hTXCTFixiklSItg7RSpGWQVoq0DNJKkZZBWho9rfnGx6aGzoVacAB7fP4OHiH6hQAAAABJRU5ErkJggg==",
+        "title": "
+заголовок<\/h5>",
+        "parentKey": "header"
+    },
+    {
+        "key": "h6",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjklEQVR4nO3Vuw2AMBAE0e2\/LD7tENCASUnMwgqELc+TLjWyPCck9GeVVMwsDZ1bVW5OK+dWcRGDF0mRlkFaKdIySCtFWgZppUjLIK3UcGmVj+Y1XES8iEjrCjsidkS\/7sh2mr3n\/8hTXCTFixiklSItg7RSpGWQVoq0DNJKkZZBWho9rfnGx6aGzoVacAB7fP4OHiH6hQAAAABJRU5ErkJggg==",
+        "title": "
+заголовок<\/h6>",
+        "parentKey": "header"
+    },
+    {
+        "key": "table",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nO2WMQrAMAzE9P9nNfRd16nZalLI4IAEWQPmLNsgIn+5gWx8Lzv\/HCuF5IBCYiGYyMTWQkdwasXxi3vkEzc7zU4U6UbcI\/RyJCaCicTWKtARdAQdqdARmjki3Yi3Fr0ciYlgIrG1CnQEHUFHKnSEZo6MAzb7tVKIiDB5AFe+6W16LTrKAAAAAElFTkSuQmCC",
+        "title": "таблица",
+        "parentKey": ""
+    },
+    {
+        "key": "limiter",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWUlEQVR4nO3RsQ3AQAwDMe+\/tNOnS3f5JwENINwMd9nXfmsdiVGkRpEaRWoUqVGkRpEaRWoUqVGkRpEaRWoUqVGkRpEaRWoUqVGkRpEaRWoUqVGk5pgizEcPg2G3STOUdwYAAAAASUVORK5CYII=",
+        "title": "",
+        "parentKey": ""
+    },
+    {
+        "key": "align",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAt0lEQVR4nO3ZUQqDQBAD0Hx5p9bztdp7ur1GijCCCKU7H67R5sF8LkwIyoqAmf21DsALwBsARaYAGGK3aqPA4vwyz0yQEodu0HFfNVNtSa+G2b0c5CyNsPFsOYga+mEXQzfyw95vqWaNXCZIa3QQMXQjG75rQezSeDQ6iBi6ETF0I2LoRsTQjYihGxFDNyKGbuTsjZQ4MP\/uUtHHTlPm0HDA93ntPDJBugizNKMwU4RI\/Z42s4v5AMFxvrmgsp\/vAAAAAElFTkSuQmCC",
+        "title": "выровнять",
+        "parentKey": ""
+    },
+    {
+        "key": "alignCenter",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWElEQVR4nO3VwQkAMQwDsOy\/tG+AfnuUuhLkH2NIZuB3uXQWpxcSpLYRgB5pObERZDQS3xt4Qy6dxemFBKltBKBHWk5sBBmNxPcG3pBLZ3F6IUFqG4HZ5wNBcSUGoVfKQQAAAABJRU5ErkJggg==",
+        "title": "по центру",
+        "parentKey": "align"
+    },
+    {
+        "key": "alignJustify",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVElEQVR4nO3RwQkAQQwCwPTfdK6AfPcIhhnwr1gFv+vQDNuFDDn7CECWDs2wXciQs48AZOnQDNuFDDn7CECWDs2wXciQs48AZOnQDNuFDDn7CNQ7H\/PslJbugd28AAAAAElFTkSuQmCC",
+        "title": "заполнить",
+        "parentKey": "align"
+    },
+    {
+        "key": "alignLeft",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAXUlEQVR4nO3WwQkAMQgEQPtveq+AfD0SZQbyd1mIVsHvMvQdbg8kyNpGAGbJlm80gpRGYkMD5IGlmI6L4PZAgqxtBGCWbPlGI0hpJDY0QB5Yium4CG4PJMjaRqD6fCcVJQZ9Gl14AAAAAElFTkSuQmCC",
+        "title": "с левой стороны",
+        "parentKey": "align"
+    },
+    {
+        "key": "alignRight",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWElEQVR4nO3VwQkAMQwDsOy\/tG+AfnuUuhLkH2NIZuB3uXQWpxcSpLYRgDek5fxGkNFIfHagRy6dxemFBKltBOANaTm\/EWQ0Ep8d6JFLZ3F6IUFqG4HZ5wNbzSUGz+oQgAAAAABJRU5ErkJggg==",
+        "title": "с правой стороны",
+        "parentKey": "align"
+    },
+    {
+        "key": "list",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAoklEQVR4nO3YsQrCMBRA0TvZX9NvEH\/Wmt8wg4vQWdcngi4lCh1s0noPvO0NydBeCEiSKktAjKZngeLDvB2A4cve3JOB3dSLbIB7A4eP0VymXqQDbmu4yNMeuDZw+HjNGdhS0BeWj6VFScuWCh+7Zef3v99s2akfwbDsSFqdZNmp0pBs2alf8virsp8Ky5ZdWqFk2bHsMXcQO1\/jseySJJr3AIII3AEHt1Y9AAAAAElFTkSuQmCC",
+        "title": "список",
+        "parentKey": ""
+    },
+    {
+        "key": "listRating",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB6ElEQVR4nO3YO2hVQRDG8V9AJYmNQUWwiE8UG1PZWdsJ11Q+QC0U7WwUjJUErLRJkICYYClIJIWlxCJgJQSsBeOr0MZCJCIhXlmYaxZJgpV3N5w\/DOyZbxZm2XPY\/Q7rcySieu7hrsrZjC\/4HONqOYV2REvFPMsWksbFsxt3MI5HmMZzLOFlxFLkpqNmPOakuUVxBovZDqT4hou4EONcW4w5q9HuUvxhCAuRfIz+FUlv7ETSPuGYten6QhK7MBfClBWmIjcXNVVwOpq+gUu4HON2aNXwMJp+m21b55WbVBEL2QKeRnSe36mEg9FwOs3PZ\/mT+Bhaqimeq3iC7ato2\/AAV1TAzn+o2fEf+mjY8PRFVM85nLUBmI2omn1Yxi8cUDGj2YmexlWwCQPYH9f543iPrxEfIjcUNQMxpygGMb\/GHf9+xGrafMwtiv4wU50mZ3Ade7EnxjOZ\/rfxKspY9eBmfODfMZxpw5FbjppUq9SF5BfHJExkB+JE5JJWDSPR9BjeRIxF7paKmM22aymi8\/xCJfTiRzT9Ov6WHMWryP3EVhVwIhZyG1uyfDozrsUHn2qKp4XD6+iHav8P3FAKfY2xKozZxlgVxGhjrLrEYGOsCqWnMVaFOsSRxlgVRG9jrAqj1Rgr3eU3HB96Xfk78yUAAAAASUVORK5CYII=",
+        "title": "рейтинговый список",
+        "parentKey": "list"
+    },
+    {
+        "key": "listCircled",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAp0lEQVR4nO3ZQQrCMBCF4XePxp3m7hK6st5Koe0FIoG3EFFw1xn4PxgIQxczpVk8KgH4R5HUJO2uWdJFCZd4SuofNXqTEmke\/ObBRy3uXZXI7qHf3\/7JvfXL8z1oafOhZF9k9mHxMqPu7o3PLo0q6fHjsp+VzOSLvblaxiUAAIARrCJpBCsdnkE6wSqySrACAAAxFf5YBdIIVjo8THWCVWSVYAVAWbwAblhSyPZ78IAAAAAASUVORK5CYII=",
+        "title": "список с кольцами",
+        "parentKey": "list"
+    },
+    {
+        "key": "listPointer",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAl0lEQVR4nO3ZQQqDMBCF4f8eurTevQzerIXGCyiFdCM2FLrJyP\/BbIybtwjkMSDpFyMQwFpnAW4kDPEEtsO8vw0kEichPnM\/+X\/rdFgbh69MQcpVgiyNw8gUZAYeXy77RDJDvdilTmQMIUmSKotVT6LxorRYYbHCYjVbrCRJUp9GN1YdCYsVfe1HSuPQjRVurP7jxkq6uB1mvFq26JqIOAAAAABJRU5ErkJggg==",
+        "title": "обычный список",
+        "parentKey": "list"
+    },
+    {
+        "key": "listCheckbox",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABC0lEQVR4nO3YMUoDQRQG4G9Zi2CCWAuSAwheIuARrIOk8AaS0gPYi4VnCHgCa0sbsbXT0kILIRKIsCwhadS8Wd4HUyzsDPwMu\/w8Ukq\/rcJAB0zxjGMFG+ELc3zgTIGGeFuG+Fmv2FeQHh5aIRY3cyK4PvYaz7etEIt1sWLf\/B\/XRjVmeMQhzlccMlv+vUIHuWm8\/ILP1gFPrdsKGWSyYfM7jtbsDxNkF3drNp8qSI3rFSGuFOqyEeIeOwo2Xn7wBzpgoKOqroSbZvsNYpjtd4v62X7F6FoL2X5l+\/0bdbbfwMbZfgtQZfsNZJSz3yB6Ofu1vdJY5+xXnJHpJGe\/AdXZfgMbZ\/tNKYnkG+vm+Sfg\/YlgAAAAAElFTkSuQmCC",
+        "title": "список с чекбоксами",
+        "parentKey": "list"
+    },
+    {
+        "key": "outlineList",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABMUlEQVR4nO3ZvyuFURgH8I8bBi6xYbwpBkooOzFbWAzKIJNBKbablcU\/gT9AsTMqm0GZWBTlx+7q1rl1y2W993HPp07v23ve4Xx7h\/M85yVrbV0YREFQfdjHMyoYEtQsbnARPUgBHShHD1LTNkEqLTzaM0gY5f8SZAab6Gn2QrIsy7JwhjGPyVQJh3SMr7q65RydAlrFXNrRd1OY6rPQRlOQHcFtpyDVLxTWBN5w+st8iH5kHE+4\/qP6bfkg0+ko6ApFgb03SHgroJUGY7HZi8qyLMvC6MYC1tM17B+rs9RYfaRd\/TJqlziGgXR\/kMKUBHeIV\/QK6giPKUTopmoJe7jHHfobvBOisaqZShNbfmr5IKW6xW6kiWopH0oRn3jBQwpxEnUvGcEy1tIBRJZl\/8w3yMQm08J\/KcUAAAAASUVORK5CYII=",
+        "title": "нумерованный список",
+        "parentKey": ""
+    },
+    {
+        "key": "outlineListInteger",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABN0lEQVR4nO3ZvSuFURwH8A9h4BIbxptioISyE7PlWgzKIJNBKTZZWfwT+AMUO6OyGZSJRVFednTr3PJyMd7np\/Op0\/N0znK+nVPn\/J6HrNha0YNmQXViE3d4Q6+gJnCO4+hBmtGErehBav4K8lbg9kkOIq+IhmytMMaxjPZGTyTLsiwLpw9TGEk34ZD28PrhuD9Ci4DmMZlO9PUUptoX2kAKsia41RSkukJfhbn9DuMRBz+EDBFkCLc4++X2W\/ggY+lT0ClKv2y7wgd5qjNwIaBKnTbT6EllWZZlYbRhGovpGfaP1WEqrJ7TqX4StUocRHd6305hyoLbwQM6BLWLmxSiXlElSj0yiw1c4RJdUYPUjKaBFd8VPkj5w2SX0kAlWpASXnCP69S5H\/Us6cccFtIHiCzL\/pl3pvoP+EnFA7IAAAAASUVORK5CYII=",
+        "title": "числовой список",
+        "parentKey": "outlineList"
+    },
+    {
+        "key": "outlineListLetter",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC\/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAEh0lEQVR42u1aXUgUURSes3ec3fVnZ92yFfWhtT9CpSAk6CUsVhQtSnooKiNIEgqDwIKgoMTwoR\/fsqIMf4h82OcIRB968DHrwaAwiuglKF8U\/7btHBiYmu7u\/Dw47u1e+LjD3Hvu3PPNnXPPPXOUTCYT+J+hSAIkAZIASYAkQBIgCcgGULD09\/ez3t5e9U\/QPWqjPk7GGBwcDJDcWqKvr08dGxsDBYsXAqCwsDARCASuAsAwYtSCYWy7Fg6Ht+UgAcrKyiKMsXYAeExyaw2c4z1N0\/Z3dHQwNwRAaWlpHABeEnm5AADj0Wg0ziNhfn4+QCRhvxXq6yO+FRQUNCpYHBFAHVGgFaslB4MvqarayhkcNmHB22+oyW8AwAOak2MC8M2ddzo4Y+wyyXCWPxEwna8EXHIxeD9vec3MzASw3MjHT4AIuGMdSC0pR8R5BDzksWt8BmQEOwHgGWLUBzwk5bu7u50bwba2Ng0AUlZFo7uOZ6K7T\/AISJFMrm1waGjIl20wlUq53gahpqamEGUmrYpu3HcxU568yVtikyRDsiI4QlBVVaWjUlNWReMHr2eq2gZ4BEyRjBAEKFgikUgCq1mrorE9ZzOx+nM8AmZRZjPJCkFAMBjci9XcP4oCEHgEzJGMMARomtaA1YKLbWaBZIQhQFXVI1gtuyBgmTFGMvxt1eeSyzYp7r1APlDmMo+Arq4uhoeqnUjqMcRpxKm1BLn0aJ\/Ks5GguPACFxFfDCzaeoPmajpkGNRVRNoHLAPAq+Li4i0KFqcE3OUo+LqoqGg7YgddO\/AGobq6OgIAE9TuN1CnXseuMCnDGWSkpKQkgEdfwOtnHAKeptPpv4iMxWIVWL1fJ4ehJ44\/AcbYGYsRXEEGL1Cb0d5ubcd7F60MNzQ0hMgf901x\/vzsPcHKykodFb6F\/d8i3uF1T0VFhU5tdu1WMkOh0E4AeI6XHxCffQBvfvYRocbGRrYJC53pm5qaGN1z0s4B1NXVhTDCVEne4lqD5tfc3MzsdwE+gOC93YSfPoAMi0sCJAGSAO9\/hmyKmEbQ3ObKnGwzyWQy5zZYW1sb9Gsb5M\/PPiQWMf7oTDt0NG6gcxTJ4ghtB4Ahvxwh\/vzsXeF2D\/GATquriQ5S0FA+4xf487M\/DA14PGyIcRii5e\/huHnbwjAkEgnd1+Mwf372BITD4a0AMG78HE0bWEX8yvKAjyhTmyUgchSrTz4HRCYolmFPgAlACxrHcFKLEVo6yRjrQvmvHOVXkd0r5uB5GRKz9wFQyU6eYSR2dV3faD4gj4OiOXIFdmA1w3n7PxljrdRHWFcYHaICALifxbI+qq+v18R0hU0jlsTqB8\/waZpmGD4xCQBd1zdQnpCd4ROSAFLOCISu2Bg+AQhwb\/gOk\/KWPDxx8gRbWlq4hs\/AdwB4gRix5uEJkSdovP0DZPi8JCHleZ6gmSDlNQ1NhDxBoGXj4QEDJJvfeYLmJ7Cflo2XJSZEnmBPTw8jAXqrbvLwBMkTNFcCbiG01TnOw1vPeYIyLC4JkARIAiQBkgBJgCTAit+EktUrA0aM6gAAAABJRU5ErkJggg==",
+        "title": "буквенный список",
+        "parentKey": "outlineList"
+    },
+    {
+        "key": "outlineListRoman",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADvSURBVFiF7dehSgVREIfxH2jSrkHBIhgs+gg2TQpWQUw2uY+gYDHeJOJDmI02wWawWAyKoAjiA3gNO+Fyghdk94xhP1g4\/zTfGWZnWRjhSRLTRZ7BXG2J8Q7sRq72lB14x03rV5zAv5qBJWzUlkifgRN8hsBD5J6eqlzhIs7rkQ9rCoy\/hluRz2sVLxdRyT4GmQLzWMsUGOIyU2CE70yBAc66FrjHS+SvyM+R3yL39HTGFI41y+YWyzjCLB6xiT284qMrid++BcPI210Vn7QHSk6xmCmwg9VMgQPNfKQJ3LVZ\/C8C11jJFFjQ\/D21xg\/VxGUzooeydAAAAABJRU5ErkJggg==",
+        "title": "римский список",
+        "parentKey": "outlineList"
+    },
+    {
+        "key": "limiter",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWUlEQVR4nO3RsQ3AQAwDMe+\/tNOnS3f5JwENINwMd9nXfmsdiVGkRpEaRWoUqVGkRpEaRWoUqVGkRpEaRWoUqVGkRpEaRWoUqVGkRpEaRWoUqVGk5pgizEcPg2G3STOUdwYAAAAASUVORK5CYII=",
+        "title": "",
+        "parentKey": ""
+    },
+    {
+        "key": "link",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACY0lEQVR4nO2Zz2oUQRCHv9wiRvMKYvTgQ0STrHh0UQRfwVz2pLDog+iK4DOo8RLBJILgC+jGSw4KiaDrn4mbi+BIQS0MTc9M947b3QvzQcHs0N1bv5mu3qpaaGlpmQeuAo+BIXCsJtcDoMMccAHYA\/Ia29WxSbIGjBxE5GoydpXEuAz89hCRq31P6c3Inj+xOPlM39JpNbl+bhm3Q6Ii\/gJ3K+bct4jZIEERPYe5W8a8h0RivYGIyUMozv1ABC4BPxuIEM4Y838RmAXgbUMRwlljDXkwQblmCdT+FOt0jDXeE5inhgPb+pZ8eRk72D8aDlyfYo17lrcqh0dQxoUvfwcs6v0bwBHwFbhVMb+nMVUU8ZoIjAsilvXebeBPwTER4ypiBKwQgf0aEWJfHEWcaNoShc0aEfL5pqOIDglQJkLuT5DTrD\/PIuQA6AKvLKdTEBEbWooOtU441pjY9BCxrDGUxxBxvqI8rQtsVxGjWQd2VXn6v0TszPqILavsfEUIdzQVl3I309xJ0o6Z\/2KXidjWtGPRQ0RylV3fSADnUkTPGNd1iAnZTlFY8yhPPzsEdvAaAu0djTwqu0OH00mCOjh7HiImW+sTcKDXwinjiM1iNJRzw6r6TmV0jTWCb62BpQPoy4Ild3pCYPYNB6ZJFfopdAczwwHpw\/pgqyfeEIHMcGKpoYgfwEUiMJxya9lEjGOWpwPDmRcNRETvmueGPajpOyUnYsKuRcyWOrekTeWOpQOYlAjhnPabck8bp9IoKLLq+WflN+AKibJSss1ySxtTavnkWQceab6UhS5PW1paaMw\/bajY23D20soAAAAASUVORK5CYII=",
+        "title": "ссылка",
+        "parentKey": ""
+    },
+    {
+        "key": "link",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACY0lEQVR4nO2Zz2oUQRCHv9wiRvMKYvTgQ0STrHh0UQRfwVz2pLDog+iK4DOo8RLBJILgC+jGSw4KiaDrn4mbi+BIQS0MTc9M947b3QvzQcHs0N1bv5mu3qpaaGlpmQeuAo+BIXCsJtcDoMMccAHYA\/Ia29WxSbIGjBxE5GoydpXEuAz89hCRq31P6c3Inj+xOPlM39JpNbl+bhm3Q6Ii\/gJ3K+bct4jZIEERPYe5W8a8h0RivYGIyUMozv1ABC4BPxuIEM4Y838RmAXgbUMRwlljDXkwQblmCdT+FOt0jDXeE5inhgPb+pZ8eRk72D8aDlyfYo17lrcqh0dQxoUvfwcs6v0bwBHwFbhVMb+nMVUU8ZoIjAsilvXebeBPwTER4ypiBKwQgf0aEWJfHEWcaNoShc0aEfL5pqOIDglQJkLuT5DTrD\/PIuQA6AKvLKdTEBEbWooOtU441pjY9BCxrDGUxxBxvqI8rQtsVxGjWQd2VXn6v0TszPqILavsfEUIdzQVl3I309xJ0o6Z\/2KXidjWtGPRQ0RylV3fSADnUkTPGNd1iAnZTlFY8yhPPzsEdvAaAu0djTwqu0OH00mCOjh7HiImW+sTcKDXwinjiM1iNJRzw6r6TmV0jTWCb62BpQPoy4Ild3pCYPYNB6ZJFfopdAczwwHpw\/pgqyfeEIHMcGKpoYgfwEUiMJxya9lEjGOWpwPDmRcNRETvmueGPajpOyUnYsKuRcyWOrekTeWOpQOYlAjhnPabck8bp9IoKLLq+WflN+AKibJSss1ySxtTavnkWQceab6UhS5PW1paaMw\/bajY23D20soAAAAASUVORK5CYII=",
+        "title": "гиперссылка",
+        "parentKey": "link"
+    },
+    {
+        "key": "audio",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAACPklEQVR42u3YS4hVdQDH8c8MjSVUTDA9zSAKFCIMF0GlUQlKL9rUJqlFRQXhokVQUJsKF7oQUfGJK124ksEHgopPkEEdQVDEx8K3gwu56qiMd+7P3V3JvR7nzBXhfP77w5fz+D+OSqVSqVQqj7tpDjrmS4\/IXMMiRkzTcU9YpCEiYr77+cQk4+QFu0VzWHbf+xNXxifhXeelbcCnGmKvbiX7yW1pGTDFq2CFiHlKNMFKkZYB76ireQsTnRI1fUoyyQFpG\/C2ujjuKcwRsUApZrosLQOm+0YX\/hbxH9glap42ZvOMSMuAHtfF\/+g2IIa9jM9E\/KywXxxxrjkuirQJ6DIoRs3ADI1mzFmxXUFzpdBYBt50UxwC+8Ul3VgsRjyjkC2KB2g+\/Y\/xo4j38bmIWQrZ+5ABvW6J1XhRQ\/yJPg3xR2cC2CROgzNiA7gqVnQq4B8xaiK2iQEwKPo7FfCDiMlYL040r7aj8wHrxEmwR+zs\/CPYLA6DQ6K\/8y\/hcbERDIlVnf4Mn1UX\/6K3+UEWsHXME9HXImY3V8Q5CvluzFNxv6iZgIXirl4F\/eaoi81xpeBiNFVdLEeX02KPMfu9wHJMv6ibilnlbcs+MvSAG5JvRawFW8WwXqWYbKBlAPCcmhjSh5kaYqnSPGlN24Dn3VA3Gz2OimGvKNWv7rQM4DVTwAIRfyndey60DAA+MCoO66F8L9nXNuALcc0bxkmPJW0Ppx963bj63q1HdzwHpht0wlfVn5pKpVKpVB5j9wCri7X3JaOUhgAAAABJRU5ErkJggg==",
+        "title": "песня",
+        "parentKey": "link"
+    },
+    {
+        "key": "image",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAABq0lEQVR42u2Zr0sDURzAPzLdVlTwRxJtBkHBZLItaTEIblYRBNslDYJJEIMGQSxi8A8walkxCgNhDoNhxSCIODeUOXb7KgzmON5+3e7ehb3Pp92VD9y9d4\/vYTAYDHUkyGAjPmuTIY6COBVEkxVVwiOi0TQ4sRGN2jip3Toggl9EOESqNg4I4ydDrQP8JdIjAVEsUhT\/TGER1R0wSdqx5KZ0BkRJK1Z9VF+AhSi09AWkEIUpfQFFRGGxhwL0PwL9L2FfkMswzDnf5NinMVN+bkRXCFWPgtiKd5E6d3R\/jFawHSe7TZ0Bc+QRh2VWdQWMk0W9wcRw0s+A1wFh7hDU5lmgni0+KbCBmgF3ARdIE9+YoUqI09qpdx0lbgIspIUvzAJj3CA1f1j2JmCJMtLSEg8UHNe+WOw+YIYc4toP5rsLGOEZ6cpXpt0H9JNEujbLhNuAM8QTM4y6CdhGPPOewU4DYpQQD00S6SRgmnfEY68JtRswzBPig5f0tRMQ4hbxyeN2Ak4QH91rEqDFStABYgJMQM2gB5WBj2qDHlavoSCubVyfMP9GDAbDP79OP5LG5WO1GgAAAABJRU5ErkJggg==",
+        "title": "картинка",
+        "parentKey": "link"
+    },
+    {
+        "key": "video",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA8UlEQVR4nO3VIU4EQRBG4Q8SDHIdCZ4DcAEugMRyBa5A9gigsJyBcAF2PXgElgSDQmxIkRGTcIDpLmaol5TufvVXd1EURVEkEQsp2RcoEZWI9PGJeiPyOx2ViPzuxl9I5AEfSxDZxwq32M1Z5DcneFyCyMg5XpcgMnCAK3zOXWTkCHf4nrvIyCm2SxAZ2MPL3EVWuJlwxPQWGfbMJd6nPjc6ipzhucGZ0UvkGPeNBKKHyCGu8dVYIlqJDL\/RBd46CEQrkfXE+yGyRLJK9gVKRCUifXyi3oj8Tse\/S6SYK9uEcdm0ENkkiDy1ECmKoihMxQ+FERVC2aI2lwAAAABJRU5ErkJggg==",
+        "title": "видео",
+        "parentKey": "link"
+    },
+    {
+        "key": "file",
+        "icon": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAABdUlEQVR42u3XMUvDUBSG4RfUUTKIk7uDgkP6G7p2ELoWlwj9AQ4Ozi6CdCgadHKqu4OODoVCMwsutnugLnawxV7hLNIrJiXN9Qje79vCOTfPciHB5+9lnSPu6ZMUbo9jCmebAaaEnlMoazzJuhqhLqszrjkkKtDHZQlnsvhA0cSyf8dzUYIcQLwkIGbri6ADwCIoACyCAsAiKAAsggLAJigAbIICwCYoAGyCW8CF7F9BFsEl4ET2B2xkEg7cAfb4kBNeSfjeF4z00h0A2pjcxi4BK5zyrgiQbLKf8b3gEJCf2AM8wAM8oBxAQI8RNT1AQ6a6eoBIphIP8AAP+C1AQINorjcyNSSyGroB9DALdkroAjDCLNy6C0CNLslchzL1Zj3t02bV3wIP8IB\/BejrAUKmGNpqACHUWfU\/Jh7gAtCSgVtcpSPnt\/Ju+IQmFcKSW6HJRM6P+DEBKcZxUwIyUmWMcdgxVXKyQ4eUGabkzkjpsGu\/7hNi7k8fpxURNQAAAABJRU5ErkJggg==",
+        "title": "файл",
+        "parentKey": "link"
+    }
+]
