@@ -1,7 +1,7 @@
 /**************************************************************
  * Copyright (C) 2025 msa-fw. All Rights Reserved
  *
- * @file        /msa-fw-wysiwyg/wysiwyg.js
+ * @file        https://github.com/msa-fw/wysiwyg/blob/master/msa-fw-wysiwyg/wysiwyg.js
  * @author      msa-fw
  * @site        https://github.com/msa-fw/wysiwyg
  * @date        2025-04-23
@@ -12,11 +12,13 @@ window.wysiwyg = {};
 window.wysiwyg = {
     kits: {},
     langs: {},
-    addKit: function(key, buttonsPackage){
+    addKit: function(key, buttonsPackage)
+    {
         this.kits[key] = JSON.parse(buttonsPackage);
         return this;
     },
-    addLang: function(langPackage){
+    addLang: function(langPackage)
+    {
         this.langs = JSON.parse(langPackage);
         return this;
     },
@@ -35,25 +37,21 @@ window.wysiwyg = {
     },
     createField: function(textAreaFieldSelector, packageKit, append)
     {
-        let fieldFormResult;
         let selector = textAreaFieldSelector.replace(/#|./, '');
         let id = selector + '_' + packageKit;
 
-        fieldFormResult =
-            '<div class="wysiwyg" id="' + id + '">\n' +
-            '    <div class="wysiwyg-block">\n' +
-            '       <div class="editor-header">\n' +
-            this.renderButtons(packageKit) +
-            '    </div>\n' +
-            '    <div class="editor-body">\n' +
-            '       <div class="container">\n' +
-            '          <div class="content content-editable-field" contenteditable="true" data-selector="' + textAreaFieldSelector + '"></div>\n' +
-            '       </div>\n' +
-            '       </div>\n' +
-            '    </div>\n' +
+        return '<div class="wysiwyg" id="' + id + '">\n' +
+                '<div class="wysiwyg-block">\n' +
+                    '<div class="editor-header">\n' +
+                        this.renderButtons(packageKit) +
+                    '</div>\n' +
+                    '<div class="editor-body">\n' +
+                        '<div class="container">\n' +
+                            '<div class="content content-editable-field" contenteditable="true" data-selector="' + textAreaFieldSelector + '"></div>\n' +
+                        '</div>\n' +
+                    '</div>\n' +
+                '</div>\n' +
             '</div>\n';
-
-        return fieldFormResult;
     },
     renderButtons: function(packageKit)
     {
@@ -98,7 +96,8 @@ window.wysiwyg = {
 
         return result;
     },
-    renderButton: function(button, titleAsText = false){
+    renderButton: function(button, titleAsText = false)
+    {
         let buttonClass = 'wysiwyg-button ' + button.key;
         let buttonParams = '';
         if(button.key !== 'limiter'){
@@ -149,7 +148,8 @@ window.wysiwyg = {
             }
         }
     },
-    closeAllPopups: function(){
+    closeAllPopups: function()
+    {
         let popUps = document.querySelectorAll('.pop-up.closeable');
         if(wysiwyg.defined(popUps)){
             for(let i = 0; i < popUps.length; i++){
@@ -159,7 +159,8 @@ window.wysiwyg = {
             }
         }
     },
-    addRemoveClass: function(className, object){
+    addRemoveClass: function(className, object)
+    {
         if(object.classList.contains(className)){
             object.classList.remove(className);
         }else{
@@ -213,7 +214,8 @@ window.wysiwyg = {
         }
         return this;
     },
-    insertHtml: function(button, command, content = null){
+    insertHtml: function(button, command, content = null)
+    {
         let editor;
         if(editor = wysiwyg.getEditorObject(button)){ editor.focus(); }
 
@@ -228,38 +230,53 @@ window.wysiwyg = {
         },
         bold: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             wysiwyg.insertHtml(button, 'bold');
         },
         italic: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             wysiwyg.insertHtml(button, 'italic');
         },
         strike: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             wysiwyg.insertHtml(button, 'strikethrough');
         },
         underline: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
             wysiwyg.insertHtml(button, 'underline');
         },
         hr: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             wysiwyg.insertHtml(button, 'insertHtml', '<hr>');
         },
         code: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let content = wysiwyg.focus(button).selected();
             let textContent = '<pre>' + content.text + '</pre><br>';
             wysiwyg.insertHtml(button, 'insertHtml', textContent);
         },
         quote: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let content = wysiwyg.focus(button).selected();
             let textContent = '<blockquote>' + content.text + '</blockquote><br>';
             wysiwyg.insertHtml(button, 'insertHtml', textContent);
         },
         table: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let content = wysiwyg.focus(button).selected();
             let textContent =
                 '<table>' +
@@ -287,10 +304,13 @@ window.wysiwyg = {
         header: function(button)
         {
             if(button.querySelector('.pop-up')){ return; }
+
             return this.h1(button, 'h1');
         },
         h1: function(button, tag = 'h1')
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let content = wysiwyg.focus(button).selected();
             content.text = content.text ? content.text : 'HEADER';
             let textContent = '<' + tag + '>' + content.text + '</' + tag + '><br>';
@@ -298,22 +318,32 @@ window.wysiwyg = {
         },
         h2: function(button, tag)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             return this.h1(button, tag);
         },
         h3: function(button, tag)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             return this.h1(button, tag);
         },
         h4: function(button, tag)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             return this.h1(button, tag);
         },
         h5: function(button, tag)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             return this.h1(button, tag);
         },
         h6: function(button, tag)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             return this.h1(button, tag);
         },
         align: function(button)
@@ -323,45 +353,62 @@ window.wysiwyg = {
         },
         alignCenter: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             wysiwyg.insertHtml(button, 'JustifyCenter');
         },
         alignJustify: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             wysiwyg.insertHtml(button, 'justifyFull');
         },
         alignLeft: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             wysiwyg.insertHtml(button, 'JustifyLeft');
         },
         alignRight: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             wysiwyg.insertHtml(button, 'JustifyRight');
         },
         list: function(button)
         {
             if(button.querySelector('.pop-up')){ return; }
+
             return this.listPointer(button);
         },
         listRating: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let content = wysiwyg.focus(button).selected();
             let textContent = '<ol class="rating" reversed><li>' + content.text + '</li></ol>';
             wysiwyg.insertHtml(button, 'insertHtml', textContent);
         },
         listCircled: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let content = wysiwyg.focus(button).selected();
             let textContent = '<ul style="list-style-type: circle"><li>' + content.text + '</li></ul>';
             wysiwyg.insertHtml(button, 'insertHtml', textContent);
         },
         listPointer: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let content = wysiwyg.focus(button).selected();
             let textContent = '<ul style="list-style-type: disc"><li>' + content.text + '</li></ul>';
             wysiwyg.insertHtml(button, 'insertHtml', textContent);
         },
         listCheckbox: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let content = wysiwyg.focus(button).selected();
             let textContent = '<ol class="checkbox"><li><input type="checkbox">' + content.text + '</li></ol>';
 
@@ -372,58 +419,74 @@ window.wysiwyg = {
         outlineList: function(button)
         {
             if(button.querySelector('.pop-up')){ return; }
+
             return this.outlineListInteger(button);
         },
         outlineListInteger: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let content = wysiwyg.focus(button).selected();
             let textContent = '<ol type="1"><li>' + content.text + '</li></ol>';
             wysiwyg.insertHtml(button, 'insertHtml', textContent);
         },
         outlineListLetter: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let content = wysiwyg.focus(button).selected();
             let textContent = '<ol type="A"><li>' + content.text + '</li></ol>';
             wysiwyg.insertHtml(button, 'insertHtml', textContent);
         },
         outlineListRoman: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let content = wysiwyg.focus(button).selected();
             let textContent = '<ol type="I"><li>' + content.text + '</li></ol>';
             wysiwyg.insertHtml(button, 'insertHtml', textContent);
         },
         link: function(button){
             if(button.querySelector('.pop-up')){ return; }
+
             let content = wysiwyg.focus(button).selected();
             wysiwyg.helper.openModal(button, 'wysiwyg.helper.addLink', content.text);
         },
         audio: function(button)
         {
             if(button.querySelector('.pop-up')){ return; }
+
             return this.fileRemote(button, 'Audio');
         },
         image: function(button)
         {
             if(button.querySelector('.pop-up')){ return; }
+
             return this.fileRemote(button, 'Image');
         },
         video: function(button)
         {
             if(button.querySelector('.pop-up')){ return; }
+
             return this.fileRemote(button, 'Video');
         },
         file: function(button)
         {
             if(button.querySelector('.pop-up')){ return; }
+
             return this.fileRemote(button, 'File');
         },
         fileRemote: function(button, target)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let content = wysiwyg.focus(button).selected();
             wysiwyg.helper.openModal(button, 'wysiwyg.helper.add' + target, content.text);
         },
         remove: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let editor;
             if(editor = wysiwyg.getEditorObject(button)){ editor.focus(); }
 
@@ -439,6 +502,8 @@ window.wysiwyg = {
         },
         showBlocks: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let editor;
             if(editor = wysiwyg.getEditorObject(button)){
                 wysiwyg.addRemoveClass('active', button);
@@ -447,6 +512,8 @@ window.wysiwyg = {
         },
         fullScreen: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             wysiwyg.addRemoveClass('active', button);
 
             let editor = button.closest('.wysiwyg');
@@ -486,6 +553,8 @@ window.wysiwyg = {
         },
         editSource: function(button)
         {
+            if(button.querySelector('.pop-up')){ return; }
+
             let editor;
             if(editor = wysiwyg.getEditorObject(button)){
                 wysiwyg.addRemoveClass('active', button);
@@ -526,9 +595,6 @@ window.wysiwyg = {
         },
     },
     helper: {
-        addFile: function(modalId, wysiwygId){
-            wysiwyg.helper.addLink(modalId, wysiwygId);
-        },
         addTableColumn: function(self)
         {
             let table = self.closest('table');
@@ -598,7 +664,8 @@ window.wysiwyg = {
                 }
             }
         },
-        addLink: function(modalId, wysiwygId, linkContent = ''){
+        addLink: function(modalId, wysiwygId, linkContent = '')
+        {
             let wysiwygEditor = document.querySelector('#' + wysiwygId);
             let editable = wysiwygEditor.querySelector('.container .content');
             let tmpLink = editable.querySelector('#link-tmp-' + wysiwygId);
@@ -632,7 +699,8 @@ window.wysiwyg = {
             }
             wysiwyg.helper.closeModal('#' + modalId, '#link-tmp-' + wysiwygId);
         },
-        addAudio: function(modalId, wysiwygId){
+        addAudio: function(modalId, wysiwygId)
+        {
             let modalData = document.forms['modalForm'];
 
             if(modalData.url.value){
@@ -649,7 +717,8 @@ window.wysiwyg = {
                 this.addLink(modalId, wysiwygId, linkContent);
             }
         },
-        addImage: function(modalId, wysiwygId){
+        addImage: function(modalId, wysiwygId)
+        {
             let modalData = document.forms['modalForm'];
 
             if(modalData.url.value){
@@ -665,7 +734,8 @@ window.wysiwyg = {
                 this.addLink(modalId, wysiwygId, linkContent);
             }
         },
-        addVideo: function(modalId, wysiwygId){
+        addVideo: function(modalId, wysiwygId)
+        {
             let modalData = document.forms['modalForm'];
 
             if(modalData.url.value){
@@ -681,6 +751,10 @@ window.wysiwyg = {
 
                 this.addLink(modalId, wysiwygId, linkContent);
             }
+        },
+        addFile: function(modalId, wysiwygId)
+        {
+            wysiwyg.helper.addLink(modalId, wysiwygId);
         },
         openModal: function(button, success, textContent)
         {
@@ -705,7 +779,7 @@ window.wysiwyg = {
                                 '<input name="title" type="text" value="' + textContent + '" placeholder="' + wysiwyg.translate('input.title.placeholder') + '">' +
                             '</div>' +
                             '<div class="input">' +
-                                '<input name="url" type="url" placeholder="' + wysiwyg.translate('input.href.placeholder') + '">' +
+                                '<input required="required" name="url" type="url" placeholder="' + wysiwyg.translate('input.href.placeholder') + '">' +
                             '</div>' +
                         '</form>' +
                     '</div>' +
@@ -789,6 +863,7 @@ document.addEventListener('click', function(event){
 document.addEventListener('keydown', function(event){
     if(event.key === 'Escape'){
         wysiwyg.helper.closeModal('.modal-pop-up-window', '.tmp-lik-for-wysiwyg-editor');
+        wysiwyg.closeAllPopups();
     }
 });
 
