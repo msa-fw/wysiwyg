@@ -599,18 +599,18 @@ window.wysiwyg = {
         {
             let table = self.closest('table');
             if(wysiwyg.defined(table)){
-                let theadTr = table.querySelector('thead tr');
+                let theadTr = table.querySelector(':scope > thead > tr');
                 if(wysiwyg.defined(theadTr)){
-                    let theadHead = theadTr.querySelectorAll('th');
+                    let theadHead = theadTr.querySelectorAll(':scope > th');
                     let latestHeader = theadHead[theadHead.length-1];
                     if(wysiwyg.defined(theadHead) && wysiwyg.defined(latestHeader)){
                         theadTr.innerHTML = theadTr.innerHTML + latestHeader.outerHTML;
                     }
                 }
 
-                let tbodyTr = table.querySelectorAll('tbody tr');
+                let tbodyTr = table.querySelectorAll(':scope > tbody > tr');
                 for(let tbodyTrTotal = 0; tbodyTrTotal < tbodyTr.length; tbodyTrTotal++){
-                    let tbodyBody = tbodyTr[tbodyTrTotal].querySelectorAll('td');
+                    let tbodyBody = tbodyTr[tbodyTrTotal].querySelectorAll(':scope > td');
 
                     let latestBody = tbodyBody[tbodyBody.length-1];
                     if(wysiwyg.defined(tbodyBody) && wysiwyg.defined(latestBody)){
@@ -634,18 +634,18 @@ window.wysiwyg = {
         {
             let table = self.closest('table');
             if(wysiwyg.defined(table)){
-                let theadTr = table.querySelector('thead tr');
+                let theadTr = table.querySelector(':scope > thead > tr');
                 if(wysiwyg.defined(theadTr)){
-                    let theadHead = theadTr.querySelectorAll('th');
+                    let theadHead = theadTr.querySelectorAll(':scope > th');
                     let latestHeader = theadHead[theadHead.length-1];
                     if(wysiwyg.defined(theadHead) && wysiwyg.defined(latestHeader)){
                         theadTr.removeChild(latestHeader);
                     }
                 }
 
-                let tbodyTr = table.querySelectorAll('tbody tr');
+                let tbodyTr = table.querySelectorAll(':scope > tbody > tr');
                 for(let tbodyTrTotal = 0; tbodyTrTotal < tbodyTr.length; tbodyTrTotal++){
-                    let tbodyBody = tbodyTr[tbodyTrTotal].querySelectorAll('td');
+                    let tbodyBody = tbodyTr[tbodyTrTotal].querySelectorAll(':scope > td');
 
                     let latestBody = tbodyBody[tbodyBody.length-1];
                     if(wysiwyg.defined(tbodyBody) && wysiwyg.defined(latestBody)){
