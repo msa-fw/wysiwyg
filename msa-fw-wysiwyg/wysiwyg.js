@@ -31,11 +31,11 @@ window.wysiwyg = {
             wysiwyg.addRemoveClass('hidden', selectorObject);
 
             let parent = selectorObject.parentNode;
-            parent.innerHTML = parent.innerHTML + this.createField(textAreaFieldSelector, packageKit);
+            parent.innerHTML = parent.innerHTML + this.createField(selectorObject, textAreaFieldSelector, packageKit);
         }
         wysiwyg.makeEvent(selectorObject, 'afterWysiwygInitialized');
     },
-    createField: function(textAreaFieldSelector, packageKit, append)
+    createField: function(selectorObject, textAreaFieldSelector, packageKit, append)
     {
         let selector = textAreaFieldSelector.replace(/#|./, '');
         let id = selector + '_' + packageKit;
@@ -47,7 +47,7 @@ window.wysiwyg = {
                     '</div>\n' +
                     '<div class="editor-body">\n' +
                         '<div class="container">\n' +
-                            '<div class="content content-editable-field" contenteditable="true" data-selector="' + textAreaFieldSelector + '"></div>\n' +
+                            '<div class="content content-editable-field" contenteditable="true" data-selector="' + textAreaFieldSelector + '">' + selectorObject.value + '</div>\n' +
                         '</div>\n' +
                     '</div>\n' +
                 '</div>\n' +
