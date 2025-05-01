@@ -12,6 +12,7 @@ window.wysiwyg = {};
 window.wysiwyg = {
     kits: {},
     langs: {},
+    editorWidth: 0,
     addKit: function(key, buttonsPackage)
     {
         this.kits[key] = JSON.parse(buttonsPackage);
@@ -40,6 +41,10 @@ window.wysiwyg = {
         let selector = textAreaFieldSelector.replace(/#|./, '');
         let id = selector + '_' + packageKit;
 
+        if(!wysiwyg.editorWidth){
+            wysiwyg.editorWidth = selectorObject.parentNode.offsetWidth;
+        }
+
         return '<div class="wysiwyg" id="' + id + '">\n' +
                 '<div class="wysiwyg-block">\n' +
                     '<div class="editor-header">\n' +
@@ -47,7 +52,7 @@ window.wysiwyg = {
                     '</div>\n' +
                     '<div class="editor-body">\n' +
                         '<div class="container">\n' +
-                            '<div class="content content-editable-field" contenteditable="true" data-selector="' + textAreaFieldSelector + '">' + selectorObject.value + '</div>\n' +
+                            '<div style="max-width: ' + wysiwyg.editorWidth + 'px" class="content content-editable-field" contenteditable="true" data-selector="' + textAreaFieldSelector + '">' + selectorObject.value + '</div>\n' +
                         '</div>\n' +
                     '</div>\n' +
                 '</div>\n' +
@@ -532,6 +537,7 @@ window.wysiwyg = {
                     if(wysiwyg.defined(contentField)){
                         contentField.style.height = '';
                         contentField.style.maxHeight = '';
+                        contentField.style.maxWidth = wysiwyg.editorWidth + 'px';
                     }
                 }else{
                     editor.classList.add('full-screen');
@@ -545,6 +551,7 @@ window.wysiwyg = {
 
                     let contentField = containerBlock.querySelector('.content');
                     if(wysiwyg.defined(contentField)){
+                        contentField.style.maxWidth = '';
                         contentField.style.height = window.screen.availHeight/1.3 + 'px';
                         contentField.style.maxHeight = window.screen.availHeight/1.3 + 'px';
                     }
@@ -866,6 +873,7 @@ document.addEventListener('keydown', function(event){
         wysiwyg.closeAllPopups();
     }
 });
+
 
 
 
